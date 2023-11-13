@@ -42,7 +42,7 @@ jobs:
         run: pyinstaller "My App.spec"
 
       - name: "Import certificate"
-        uses: devbotsxyz/import-signing-certificate@main
+        uses: wpilibsuite/import-signing-certificate@main
         with:
           certificate-data: ${{ secrets.MACOS_CERTIFICATE }}
           certificate-passphrase: ${{ secrets.MACOS_CERTIFICATE_PWD }}

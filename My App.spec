@@ -27,9 +27,7 @@ elif platform_name == "windows":
 block_cipher = None
 
 a = Analysis(
-    [
-        "main.py"
-    ],
+    ["main.py"],
     pathex=[
         root_dir,
     ],

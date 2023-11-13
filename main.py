@@ -2,7 +2,15 @@ import sys
 from PySide6.QtCore import QUrl
 from PySide6.QtMultimedia import QMediaPlayer
 from PySide6.QtMultimediaWidgets import QVideoWidget
-from PySide6.QtWidgets import QApplication, QMainWindow, QPushButton, QWidget, QVBoxLayout, QFileDialog
+from PySide6.QtWidgets import (
+    QApplication,
+    QMainWindow,
+    QPushButton,
+    QWidget,
+    QVBoxLayout,
+    QFileDialog,
+)
+
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -41,10 +49,13 @@ class MainWindow(QMainWindow):
 
     def open_file(self):
         # Abre um QFileDialog para escolher o vídeo
-        filePath, _ = QFileDialog.getOpenFileName(self, "Open Video", "", "Video Files (*.mp4 *.avi *.mkv)")
+        filePath, _ = QFileDialog.getOpenFileName(
+            self, "Open Video", "", "Video Files (*.mp4 *.avi *.mkv)"
+        )
         if filePath:
             self.mediaPlayer.setSource(QUrl.fromLocalFile(filePath))
             self.mediaPlayer.play()
+
 
 app = QApplication(sys.argv)
 

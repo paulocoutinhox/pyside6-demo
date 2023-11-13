@@ -24,7 +24,7 @@ run:
 
 format:
 	black "My App.spec"
-	black src
+	black main.py
 
 frontend:
 	cd src/frontend && npm install && npm run build

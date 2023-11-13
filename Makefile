@@ -34,7 +34,6 @@ dmg:
 
 	create-dmg \
 		--volname "My App" \
-		--hide-extension "dist/My App.app" \
 		--hdiutil-quiet \
 		"My App.dmg" \
 		"dist/My App.app"
